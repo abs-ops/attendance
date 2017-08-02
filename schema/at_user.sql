@@ -1,3 +1,5 @@
+drop TABLE IF EXISTS `at_user`;
+
 CREATE TABLE `at_user` (
    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户编号',
    `user_name` varchar(32) DEFAULT NULL COMMENT '用户名',

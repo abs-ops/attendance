@@ -16,5 +16,6 @@ CREATE TABLE `at_device` (
    `deleted` smallint(6) NOT NULL COMMENT '是否删除(false/true)',
    `gmt_created` bigint(20) NOT NULL COMMENT '创建时间',
    `gmt_modified` bigint(20) NOT NULL COMMENT '更新时间',
-   PRIMARY KEY (`id`)
+   PRIMARY KEY (`id`),
+   UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='设备表';
