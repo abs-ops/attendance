@@ -16,7 +16,7 @@ CREATE TABLE `at_user` (
    `id_card` varchar(20) DEFAULT NULL COMMENT '身份证号',
    `gender` varchar(2) DEFAULT NULL COMMENT '性别(male/female)',
    `mobile` varchar(20) DEFAULT NULL COMMENT '手机号码',
-   `nation` int(11) DEFAULT NULL COMMENT '民族',
+   `nation_id` int(11) DEFAULT NULL COMMENT '民族',
    `origin` varchar(255) DEFAULT NULL COMMENT '籍贯',
    `home_address` varchar(255) DEFAULT NULL COMMENT '家庭住址',
    `nick_name` varchar(32) DEFAULT NULL COMMENT '昵称',
@@ -32,7 +32,7 @@ CREATE TABLE `at_user` (
  **_说明_** 
 
 民族 
-:     民族(nation)引用民族表（at_nation）id。
+:     民族(nation_id)引用民族表（at_nation）id。
 
 
 ###民族
