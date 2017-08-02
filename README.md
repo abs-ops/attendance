@@ -3,8 +3,8 @@
 
 ![数据模型概览](/assets/image/attendance.png "数据模型概览")
 
-## 用户
-用户表
+## 用户域
+###用户表
 ```
 drop TABLE IF EXISTS `at_user`;
 
@@ -28,7 +28,7 @@ CREATE TABLE `at_user` (
    UNIQUE KEY `user_name_UNIQUE` (`user_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
 ```
-##民族
+###民族
 ```
 drop TABLE IF EXISTS `at_nation`;
 
@@ -46,7 +46,8 @@ CREATE TABLE `at_nation` (
 
 ```
 
-##员工
+##企业域
+###员工表
 ```
 DROP TABLE IF EXISTS `at_employee`;
 
@@ -61,7 +62,7 @@ CREATE TABLE `at_employee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='员工表';
 
 ```
-##公司
+###公司表
 ```
 drop TABLE IF EXISTS `at_company`;
 
@@ -93,7 +94,7 @@ CREATE TABLE `at_company` (
    UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='公司表';
 ```
-##部门
+###部门表
 ```
 DROP TABLE IF EXISTS `at_department`;
 
@@ -113,7 +114,8 @@ CREATE TABLE `at_department` (
    UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='部门表';
 ```
-##设备
+##设备域
+###设备表
 ```
 DROP TABLE IF EXISTS `at_device`;
 
