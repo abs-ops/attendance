@@ -1,4 +1,4 @@
-drop table if exists `at_employee_department`;
+DROP TABLE IF EXISTS `at_employee_department`;
 
 CREATE TABLE `at_employee_department` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',

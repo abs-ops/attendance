@@ -1,4 +1,4 @@
-drop table if exists `at_device_department`;
+DROP TABLE IF EXISTS `at_device_department`;
 
 CREATE TABLE `at_device_department` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',

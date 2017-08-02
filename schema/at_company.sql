@@ -1,4 +1,4 @@
-drop TABLE IF EXISTS `at_company`;
+DROP TABLE IF EXISTS `at_company`;
 
 CREATE TABLE `at_company` (
    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '公司编号',
