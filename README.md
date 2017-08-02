@@ -45,6 +45,19 @@ CREATE TABLE `at_nation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='民族表';
 
 ```
+###登录日志表
+```
+DROP TABLE IF EXISTS `at_login_log`;
+
+CREATE TABLE `at_login_log` (
+   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
+   `user_id` int(11) NOT NULL COMMENT '用户编号',
+   `ip_address` varchar(60) NOT NULL COMMENT 'ip地址',
+   `entry_time` bigint(20) NOT NULL COMMENT '登录时间',
+   `left_time` bigint(20) NOT NULL COMMENT '离开时间',
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='登录日志表';
+```
 
 ##企业域
 ###员工表
@@ -114,6 +127,44 @@ CREATE TABLE `at_department` (
    UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='部门表';
 ```
+###员工-部门表
+```
+drop table if exists `at_employee_department`;
+
+CREATE TABLE `at_employee_department` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `employee_id` int(11) NOT NULL COMMENT '员工编号',
+  `department_id` int(11) NOT NULL COMMENT '部门编号',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='员工-部门表';
+```
+
+###员工-公司表
+```
+DROP TABLE IF EXISTS `at_employee_company`;
+
+CREATE TABLE `at_employee_company` (
+   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
+   `employee_id` int(11) NOT NULL COMMENT '员工编号',
+   `company_id` int(11) NOT NULL COMMENT '公司编号',
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='员工-公司表';
+```
+
+
+###打卡记录
+```
+DROP TABLE IF EXISTS `at_punch_edits`;
+
+CREATE TABLE `at_punch_edits` (
+   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
+   `id_card` int(11) NOT NULL COMMENT '用户身份证号',
+   `device_id` int(11) NOT NULL COMMENT '设备编号',
+   `recod_time` bigint(20) NOT NULL COMMENT '打卡时间',
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='打卡记录表';
+```
+
 ##设备域
 ###设备表
 ```
@@ -140,3 +191,26 @@ CREATE TABLE `at_device` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='设备表';
 ```
 
+###设备-部门表
+```
+drop table if exists `at_device_department`;
+
+CREATE TABLE `at_device_department` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `device_id` int(11) NOT NULL COMMENT '设备编号',
+  `department_id` int(11) NOT NULL COMMENT '部门编号',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='设备-部门表';
+```
+
+###设备-公司表
+```
+DROP TABLE IF EXISTS `at_device_company`;
+
+CREATE TABLE `at_device_company` (
+   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
+   `device_id` int(11) NOT NULL COMMENT '设备编号',
+   `company_id` int(11) NOT NULL COMMENT '公司编号',
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='设备-公司表';
+```
