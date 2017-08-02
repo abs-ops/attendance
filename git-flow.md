@@ -20,6 +20,18 @@
  - hotfix: 修复 master 上的问题, 等不及 release 版本就必须马上上线. 基于 master, 完成后 merge 回 master 和 develop
 
 
+&emsp;&emsp;上述模型，实施起来对应如下一系列git命令：
+
+1.1、创建功能分支
+
+开始新功能开发之前，需要创建新的功能分支myfeature:
+
+```
+$ git checkout -b myfeature develop
+Switched to a new branch "myfeature"
+
+```
+
 
 
 &emsp;&emsp;git-flow并不是要替代 Git，它仅仅是非常聪明有效地把标准的 Git 命令用脚本组合了起来。严格来讲，你并不需要安装什么特别的东西就可以使用 git-flow 工作流程。你只需要了解，哪些工作流程是由哪些单独的任务所组成的，并且附带上正确的参数，以及在一个正确的顺序下简单执行那些对应的 Git 命令就可以了。当然，如果你使用 git-flow 脚本就会更加方便了，你就不需要把这些命令和顺序都记在脑子里。
