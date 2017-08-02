@@ -1,4 +1,4 @@
-#数据存储模型设计说明
+#数据存储模型设计文档
 
 
 ![数据模型概览](/assets/image/attendance.png "数据模型概览")
@@ -16,7 +16,7 @@ CREATE TABLE `at_user` (
    `id_card` varchar(20) DEFAULT NULL COMMENT '身份证号',
    `gender` varchar(2) DEFAULT NULL COMMENT '性别(male/female)',
    `mobile` varchar(20) DEFAULT NULL COMMENT '手机号码',
-   `nation` varchar(64) DEFAULT NULL COMMENT '民族',
+   `nation` int(11) DEFAULT NULL COMMENT '民族',
    `origin` varchar(255) DEFAULT NULL COMMENT '籍贯',
    `home_address` varchar(255) DEFAULT NULL COMMENT '家庭住址',
    `nick_name` varchar(32) DEFAULT NULL COMMENT '昵称',
@@ -28,6 +28,13 @@ CREATE TABLE `at_user` (
    UNIQUE KEY `user_name_UNIQUE` (`user_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
 ```
+
+ **_说明_** 
+
+民族 
+:     民族(nation)引用民族表（at_nation）id。
+
+
 ###民族
 ```
 drop TABLE IF EXISTS `at_nation`;
@@ -59,6 +66,13 @@ CREATE TABLE `at_login_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='登录日志表';
 ```
 
+
+ **_说明_** 
+
+用户编号 
+:     用户编号(user_id)引用用户表（at_user）id。
+
+
 ##企业域
 ###员工表
 ```
@@ -75,6 +89,16 @@ CREATE TABLE `at_employee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='员工表';
 
 ```
+
+
+ **_说明_** 
+
+用户编号 
+:     用户编号(user_id)引用用户表（at_user）id。
+
+
+
+
 ###公司表
 ```
 drop TABLE IF EXISTS `at_company`;
@@ -107,6 +131,8 @@ CREATE TABLE `at_company` (
    UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='公司表';
 ```
+
+
 ###部门表
 ```
 DROP TABLE IF EXISTS `at_department`;
@@ -127,6 +153,8 @@ CREATE TABLE `at_department` (
    UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='部门表';
 ```
+
+
 ###员工-部门表
 ```
 drop table if exists `at_employee_department`;
@@ -139,6 +167,16 @@ CREATE TABLE `at_employee_department` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='员工-部门表';
 ```
 
+
+ **_说明_** 
+
+员工编号 
+:     员工编号(employee_id)引用员工表（at_employee）id。 
+
+部门编号 
+:     部门编号(department_id)引用部门表（at_department）id。 
+
+
 ###员工-公司表
 ```
 DROP TABLE IF EXISTS `at_employee_company`;
@@ -150,6 +188,16 @@ CREATE TABLE `at_employee_company` (
    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='员工-公司表';
 ```
+
+
+ **_说明_** 
+
+员工编号 
+:     员工编号(employee_id)引用员工表（at_employee）id。 
+
+公司编号 
+:     公司编号(company_id)引用公司表（at_company）id。 
+
 
 
 ###打卡记录
@@ -203,6 +251,16 @@ CREATE TABLE `at_device_department` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='设备-部门表';
 ```
 
+
+ **_说明_** 
+
+设备编号 
+:     设备编号(device_id)引用设备表（at_device）id。 
+
+部门编号 
+:     部门编号(department_id)引用部门表（at_department）id。 
+
+
 ###设备-公司表
 ```
 DROP TABLE IF EXISTS `at_device_company`;
@@ -214,3 +272,12 @@ CREATE TABLE `at_device_company` (
    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='设备-公司表';
 ```
+
+
+ **_说明_** 
+
+设备编号 
+:     设备编号(device_id)引用设备表（at_device）id。 
+
+公司编号 
+:     公司编号(company_id)引用公司表（at_department）id。 
