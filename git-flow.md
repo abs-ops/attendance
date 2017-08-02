@@ -1,3 +1,4 @@
+![git flow](/assets/image/gitflow.gif)
 #1. 什么是git flow ?
 
 &emsp;&emsp;这里有一篇文章，主要讲解了git flow是什么。
