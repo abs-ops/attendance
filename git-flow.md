@@ -32,6 +32,18 @@ Switched to a new branch "myfeature"
 
 ```
 
+1.2、功能开发完成后合并到develop
+
+```
+$ git checkout develop
+Switched to branch 'develop'
+$ git merge --no-ff myfeature
+Updating ea1b82a..05e9557
+(Summary of changes)
+$ git branch -d myfeature
+Deleted branch myfeature (was 05e9557).
+$ git push origin develop
+```
 
 
 &emsp;&emsp;git-flow并不是要替代 Git，它仅仅是非常聪明有效地把标准的 Git 命令用脚本组合了起来。严格来讲，你并不需要安装什么特别的东西就可以使用 git-flow 工作流程。你只需要了解，哪些工作流程是由哪些单独的任务所组成的，并且附带上正确的参数，以及在一个正确的顺序下简单执行那些对应的 Git 命令就可以了。当然，如果你使用 git-flow 脚本就会更加方便了，你就不需要把这些命令和顺序都记在脑子里。
