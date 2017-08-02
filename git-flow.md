@@ -7,6 +7,7 @@
 #1. git flow出现的初衷是什么？
 
  >[A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+ >[Using git-flow to automate your git branching workflow](https://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/)
 
 
 #1. 项目中怎么使用git flow？
