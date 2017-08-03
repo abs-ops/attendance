@@ -293,8 +293,8 @@ DROP TABLE IF EXISTS `at_puncher`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `at_puncher` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'led编号',
-  `name` varchar(32) NOT NULL COMMENT 'led名称',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '考勤机设备编号',
+  `name` varchar(32) NOT NULL COMMENT '考勤机设备名称',
   `ip_address` varchar(20) NOT NULL COMMENT 'ip地址',
   `serial_number` varchar(60) NOT NULL COMMENT '设备序列号',
   `brand` varchar(60) NOT NULL COMMENT '品牌',
@@ -317,7 +317,7 @@ CREATE TABLE `at_puncher` (
   CONSTRAINT `fk_at_puncher_1` FOREIGN KEY (`supcon_id`) REFERENCES `at_supcon` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_at_puncher_2` FOREIGN KEY (`company_id`) REFERENCES `at_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_at_puncher_3` FOREIGN KEY (`department_id`) REFERENCES `at_department` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='考勤机表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='考勤机设备表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -365,8 +365,8 @@ DROP TABLE IF EXISTS `at_supcon`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `at_supcon` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '设备编号',
-  `name` varchar(32) NOT NULL COMMENT '设备名称',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '中控设备编号',
+  `name` varchar(32) NOT NULL COMMENT '中控设备名称',
   `ip_address` varchar(20) NOT NULL COMMENT 'ip地址',
   `serial_number` varchar(60) NOT NULL COMMENT '设备序列号',
   `brand` varchar(60) NOT NULL COMMENT '品牌',
