@@ -15,5 +15,9 @@ CREATE TABLE `at_department` (
    `gmt_created` bigint(20) DEFAULT NULL COMMENT '创建时间',
    `gmt_modified` bigint(20) DEFAULT NULL COMMENT '更新时间',
    PRIMARY KEY (`id`),
-   UNIQUE KEY `name_UNIQUE` (`name`)
+   UNIQUE KEY `name_UNIQUE` (`name`),
+   KEY `fk_at_department_1_idx` (`company_id`),
+   KEY `fk_at_department_2_idx` (`parent`),
+   CONSTRAINT `fk_at_department_1` FOREIGN KEY (`company_id`) REFERENCES `at_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+   CONSTRAINT `fk_at_department_2` FOREIGN KEY (`parent`) REFERENCES `at_department` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='部门表';
