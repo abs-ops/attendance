@@ -309,14 +309,67 @@ CREATE TABLE `at_puncher` (
 
 ```
 
-##公司表
+##考勤机考勤规则表
 
-##公司表
+```
+DROP TABLE IF EXISTS `at_puncher_regular`;
 
-##公司表
+CREATE TABLE `at_puncher_regular` (
+  `puncher_id` int(11) NOT NULL COMMENT '考勤机编号',
+  `regular_id` int(11) NOT NULL COMMENT '考勤规则编号',
+  PRIMARY KEY (`puncher_id`,`regular_id`),
+  KEY `fk_at_puncher_regular_2_idx` (`regular_id`),
+  CONSTRAINT `fk_at_puncher_regular_1` FOREIGN KEY (`puncher_id`) REFERENCES `at_puncher` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_at_puncher_regular_2` FOREIGN KEY (`regular_id`) REFERENCES `at_regular` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='考勤机考勤规则表';
 
-##公司表
+```
 
-##公司表
+##考勤规则表
 
-##公司表
+```
+DROP TABLE IF EXISTS `at_regular`;
+
+CREATE TABLE `at_regular` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `name` varchar(256) NOT NULL COMMENT '规则名称',
+  `content` varchar(256) NOT NULL COMMENT '规则内容',
+  `desc` varchar(256) NOT NULL COMMENT '规则描述',
+  `enable` smallint(6) DEFAULT NULL COMMENT '是否启用(true/false)',
+  `gmt_created` bigint(20) DEFAULT NULL COMMENT '创建时间',
+  `gmt_modified` bigint(20) DEFAULT NULL COMMENT '更新时间',
+  `deleted` smallint(6) DEFAULT NULL COMMENT '是否删除(false/true)',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='考勤规则表';
+
+```
+
+##中控设备表
+
+```
+DROP TABLE IF EXISTS `at_supcon`;
+
+CREATE TABLE `at_supcon` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '设备编号',
+  `name` varchar(32) NOT NULL COMMENT '设备名称',
+  `ip_address` varchar(20) NOT NULL COMMENT 'ip地址',
+  `serial_number` varchar(60) NOT NULL COMMENT '设备序列号',
+  `brand` varchar(60) NOT NULL COMMENT '品牌',
+  `type` varchar(60) NOT NULL COMMENT '型号',
+  `installed_time` bigint(20) NOT NULL COMMENT '安装时间',
+  `installed_location` varchar(50) NOT NULL COMMENT '安装位置',
+  `installed_address` varchar(100) NOT NULL COMMENT '安装地址',
+  `company_id` int(11) NOT NULL COMMENT '归属公司',
+  `department_id` int(11) NOT NULL COMMENT '归属部门',
+  `enable` smallint(6) NOT NULL COMMENT '是否启用(true/false)',
+  `deleted` smallint(6) NOT NULL COMMENT '是否删除(false/true)',
+  `gmt_created` bigint(20) NOT NULL COMMENT '创建时间',
+  `gmt_modified` bigint(20) NOT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_UNIQUE` (`name`),
+  KEY `fk_at_supcon_1_idx` (`company_id`),
+  KEY `fk_at_supcon_2_idx` (`department_id`),
+  CONSTRAINT `fk_at_supcon_1` FOREIGN KEY (`company_id`) REFERENCES `at_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_at_supcon_2` FOREIGN KEY (`department_id`) REFERENCES `at_department` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='中控设备表';
+
