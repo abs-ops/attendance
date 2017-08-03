@@ -1,0 +1,1 @@
+CREATE SCHEMA `attendance` DEFAULT CHARACTER SET utf8 ;
