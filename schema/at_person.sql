@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS `at_person`;
 CREATE TABLE `at_person` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
   `full_name` varchar(64) DEFAULT NULL COMMENT '姓名',
+  `user_code` varchar(32) NOT NULL COMMENT '用户编号',
   `id_card` varchar(20) DEFAULT NULL COMMENT '身份证号',
   `gender` varchar(2) DEFAULT NULL COMMENT '性别(male/female)',
   `mobile` varchar(20) DEFAULT NULL COMMENT '手机号码',

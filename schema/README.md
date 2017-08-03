@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS `at_person`;
 CREATE TABLE `at_person` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
   `full_name` varchar(64) DEFAULT NULL COMMENT '姓名',
+  `user_code` varchar(32) NOT NULL COMMENT '用户编号',
   `id_card` varchar(20) DEFAULT NULL COMMENT '身份证号',
   `gender` varchar(2) DEFAULT NULL COMMENT '性别(male/female)',
   `mobile` varchar(20) DEFAULT NULL COMMENT '手机号码',
@@ -23,6 +24,7 @@ CREATE TABLE `at_person` (
   `deleted` smallint(6) DEFAULT NULL COMMENT '是否删除(false/true)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='人员表';
+
 ```
 
 
@@ -58,6 +60,7 @@ DROP TABLE IF EXISTS `at_company`;
 CREATE TABLE `at_company` (
    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '公司编号',
    `name` varchar(128) NOT NULL COMMENT '公司名称',
+   `user_code` varchar(32) NOT NULL COMMENT '用户编号',
    `logo_url` varchar(256) DEFAULT NULL COMMENT '公司LOGO',
    `registration_num` varchar(100) DEFAULT NULL COMMENT '注册号或社会信用代码',
    `business_nature` varchar(256) DEFAULT NULL COMMENT '公司性质',
@@ -274,7 +277,7 @@ CREATE TABLE `at_punch_history` (
 ```
 
 
-###考勤表
+###考勤规划表
 ```
 DROP TABLE IF EXISTS `at_regular`;
 
@@ -288,7 +291,7 @@ CREATE TABLE `at_regular` (
    `gmt_modified` bigint(20) DEFAULT NULL COMMENT '更新时间',
    `deleted` smallint(6) DEFAULT NULL COMMENT '是否删除(false/true)',
    PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='规则表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='考勤规则表';
 
 ```
 

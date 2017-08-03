@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS `at_company`;
 CREATE TABLE `at_company` (
    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '公司编号',
    `name` varchar(128) NOT NULL COMMENT '公司名称',
+   `user_code` varchar(32) NOT NULL COMMENT '用户编号',
    `logo_url` varchar(256) DEFAULT NULL COMMENT '公司LOGO',
    `registration_num` varchar(100) DEFAULT NULL COMMENT '注册号或社会信用代码',
    `business_nature` varchar(256) DEFAULT NULL COMMENT '公司性质',

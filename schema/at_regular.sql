@@ -10,4 +10,4 @@ CREATE TABLE `at_regular` (
    `gmt_modified` bigint(20) DEFAULT NULL COMMENT '更新时间',
    `deleted` smallint(6) DEFAULT NULL COMMENT '是否删除(false/true)',
    PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='规则表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='考勤规则表';
