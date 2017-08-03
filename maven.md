@@ -1,4 +1,4 @@
-1. settings.xml
+# 1. settings.xml
 
 
 ```
@@ -45,7 +45,7 @@
 ```
 
 
-1. sample.xml
+# 2. sample.xml
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
