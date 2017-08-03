@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6371189-e2c7-481e-baaa-399797e219f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/schema/at_attendance.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/schema/at_led.sql" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/schema/at_device_company.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/schema/at_device_department.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/schema/at_login_log.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/b9d91f7e-b4da-402e-8a3d-7d1d33807132.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/b9d91f7e-b4da-402e-8a3d-7d1d33807132.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/a.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/schema/at_department.sql" afterPath="$PROJECT_DIR$/schema/at_department.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,11 +88,6 @@
             <path>
               <item name="doc" type="b2602c69:ProjectViewProjectNode" />
               <item name="doc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
-              <item name="schema" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -227,12 +215,20 @@
       <option name="presentableId" value="Default" />
       <updated>1501668376944</updated>
       <workItem from="1501668378181" duration="714000" />
-      <workItem from="1501757373950" duration="885000" />
+      <workItem from="1501757373950" duration="982000" />
     </task>
+    <task id="LOCAL-00001" summary="update schema">
+      <created>1501758304709</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1501758304709</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1599000" />
+    <option name="totallyTimeSpent" value="1696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
@@ -270,6 +266,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="update schema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
