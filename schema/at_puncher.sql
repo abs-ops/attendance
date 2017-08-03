@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS `at_attendance`;
+DROP TABLE IF EXISTS `at_puncher`;
 
-CREATE TABLE `at_attendance` (
+CREATE TABLE `at_puncher` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'led编号',
   `name` varchar(32) NOT NULL COMMENT 'led名称',
   `ip_address` varchar(20) NOT NULL COMMENT 'ip地址',

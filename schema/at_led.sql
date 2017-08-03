@@ -11,6 +11,7 @@ CREATE TABLE `at_led` (
   `installed_location` varchar(50) NOT NULL COMMENT '安装位置',
   `installed_address` varchar(100) NOT NULL COMMENT '安装地址',
   `supcon_id` varchar(100) NOT NULL COMMENT '归属中控设备',
+  `display` varchar(256) NOT NULL COMMENT '显示内容',
   `enable` smallint(6) NOT NULL COMMENT '是否启用(true/false)',
   `deleted` smallint(6) NOT NULL COMMENT '是否删除(false/true)',
   `gmt_created` bigint(20) NOT NULL COMMENT '创建时间',

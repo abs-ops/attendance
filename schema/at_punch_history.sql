@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS `at_punch_edits`;
+DROP TABLE IF EXISTS `at_punch_history`;
 
-CREATE TABLE `at_punch_edits` (
+CREATE TABLE `at_punch_history` (
    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
    `id_card` int(11) NOT NULL COMMENT '用户身份证号',
    `device_id` int(11) NOT NULL COMMENT '设备编号',
