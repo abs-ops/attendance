@@ -281,8 +281,8 @@ CREATE TABLE `at_punch_history` (
 DROP TABLE IF EXISTS `at_puncher`;
 
 CREATE TABLE `at_puncher` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'led编号',
-  `name` varchar(32) NOT NULL COMMENT 'led名称',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '考勤机设备编号',
+  `name` varchar(32) NOT NULL COMMENT '考勤机设备名称',
   `ip_address` varchar(20) NOT NULL COMMENT 'ip地址',
   `serial_number` varchar(60) NOT NULL COMMENT '设备序列号',
   `brand` varchar(60) NOT NULL COMMENT '品牌',
@@ -350,8 +350,8 @@ CREATE TABLE `at_regular` (
 DROP TABLE IF EXISTS `at_supcon`;
 
 CREATE TABLE `at_supcon` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '设备编号',
-  `name` varchar(32) NOT NULL COMMENT '设备名称',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '中控设备编号',
+  `name` varchar(32) NOT NULL COMMENT '中控设备名称',
   `ip_address` varchar(20) NOT NULL COMMENT 'ip地址',
   `serial_number` varchar(60) NOT NULL COMMENT '设备序列号',
   `brand` varchar(60) NOT NULL COMMENT '品牌',
