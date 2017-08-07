@@ -1,6 +1,8 @@
 #1、概述
 
 
+![考勤系统架构概览](/assets/image/architecture.png "考勤系统架构概览")
+
 
 #2、技术选择
 &emsp;&emsp;根据XX公司网络建设的具体现状和需求，XX科技作为无线网络和通信的
