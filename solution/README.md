@@ -1,7 +1,10 @@
 #1、概述
 
 
-![考勤系统架构概览](/assets/image/architecture.png "考勤系统架构概览")
+![考勤系统在施小宝平台中的位置概览](/assets/image/architecture.png "考勤系统在施小宝平台中的位置概览")
+
+
+![考勤业务架构概览](assets/image/20170808145254.png "考勤业务架构概览")
 
 
 #2、技术选择
