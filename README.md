@@ -6,3 +6,5 @@
 1. [Git Flow文档](/git-flow.md "Git Flow文档")
 
 1. [Maven文档](/maven/README.md "Maven文档")
+
+1. [技术文档](/solution/README.md "技术文档")
