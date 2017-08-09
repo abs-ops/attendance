@@ -5,7 +5,7 @@
 
  > 1.这时主要指[Vincent Driessen](https://github.com/nvie)提出的git分支管理模型(Vincent Driessen's branching model)。Vincent Driessen的博文[A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)详细讲述了Vincent Driessen git分支模型的原理。
 
-![git flow](/assets/image/gitflow.gif)
+![git flow](/assets/image/20170809095057.gif)
 
 &emsp;&emsp;简单来说, 他将 branch 分成2个主要分支和3个临时的辅助分支:
 
