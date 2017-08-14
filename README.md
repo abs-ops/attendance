@@ -3,7 +3,7 @@
 
 1. [数据存储模型设计文档](/schema/README.md "数据存储模型设计文档")
 
-1. [Git Flow文档](/git/git-flow.md "Git Flow文档")
+1. [Git文档](/git/README.md "Git 文档")
 
 1. [Maven文档](/maven/README.md "Maven文档")
 
