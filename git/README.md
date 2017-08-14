@@ -1,5 +1,5 @@
 
-#1. git flow概述
+# 1. git flow概述
 
 &emsp;&emsp;git是一个分布式的版本管理系统，开源、广泛的使用群体、灵活的分支管理、离线版本管理等特性吸引着成千上万的使用者源源不断的加入到使用git的群体之中。人们在使用git的时候，发现git虽然有一个灵活的分支管理机制，但是如果使用不恰当也会导致分支管理的混乱，进而导致很多问题。在长期的使用过程中，人们^1 总结出了一套行之有效的使用git的通用工作模式，我们将它称为git flow，下图则是git flow的形象化的展示。
 
@@ -50,13 +50,13 @@ $ git push origin develop
 
  >* [使用GIT FLOW管理开发流程](http://stormzhang.com/git/2014/01/29/git-flow/)
 
-#2. git flow出现的初衷是什么？
+# 2. git flow出现的初衷是什么？
 
  >* [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) 
 
  >* [Using git-flow to automate your git branching workflow](https://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/)
 
 
-#3. 项目中怎么使用git flow？
+# 3. 项目中怎么使用git flow？
 
  >* [Installing git-flow](https://github.com/nvie/gitflow/wiki/Installation)
