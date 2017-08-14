@@ -1,9 +1,9 @@
-#数据存储模型设计文档
+# 数据存储模型设计文档
 
 
 ![数据模型概览](/assets/image/20170809095042.png "数据模型概览")
 
-##公司表
+## 公司表
 ```
 DROP TABLE IF EXISTS `at_company`;
 
@@ -41,7 +41,7 @@ CREATE TABLE `at_company` (
 
 
 
-##部门表
+## 部门表
 
 ```
 DROP TABLE IF EXISTS `at_department`;
@@ -72,7 +72,7 @@ CREATE TABLE `at_department` (
 
 
 
-##部门考勤规则表
+## 部门考勤规则表
 
 ```
 DROP TABLE IF EXISTS `at_department_regular`;
@@ -89,7 +89,7 @@ CREATE TABLE `at_department_regular` (
 ```
 
 
-##员工表
+## 员工表
 
 ```
 DROP TABLE IF EXISTS `at_employee`;
@@ -110,7 +110,7 @@ CREATE TABLE `at_employee` (
 
 
 
-##员工-公司表
+## 员工-公司表
 ```
 DROP TABLE IF EXISTS `at_employee_company`;
 
@@ -127,7 +127,7 @@ CREATE TABLE `at_employee_company` (
 
 
 
-##员工-部门表
+## 员工-部门表
 
 ```
 DROP TABLE IF EXISTS `at_employee_department`;
@@ -145,7 +145,7 @@ CREATE TABLE `at_employee_department` (
 
 
 
-##led设备表
+## led设备表
 
 ```
 DROP TABLE IF EXISTS `at_led`;
@@ -180,7 +180,7 @@ CREATE TABLE `at_led` (
 
 
 
-##led消息表
+## led消息表
 
 ```
 DROP TABLE IF EXISTS `at_led_message`;
@@ -206,7 +206,7 @@ CREATE TABLE `at_led_message` (
 ```
 
 
-##人员表
+## 人员表
 
 ```
 DROP TABLE IF EXISTS `at_person`;
@@ -231,7 +231,7 @@ CREATE TABLE `at_person` (
 
 ```
 
-##考勤表
+## 考勤表
 
 ```
 DROP TABLE IF EXISTS `at_punch`;
@@ -252,7 +252,7 @@ CREATE TABLE `at_punch` (
 
 ```
 
-##打卡记录表
+## 打卡记录表
 
 ```
 DROP TABLE IF EXISTS `at_punch_history`;
@@ -276,7 +276,7 @@ CREATE TABLE `at_punch_history` (
 
 
 
-##考勤机设备表
+## 考勤机设备表
 ```
 DROP TABLE IF EXISTS `at_puncher`;
 
@@ -309,7 +309,7 @@ CREATE TABLE `at_puncher` (
 
 ```
 
-##考勤机考勤规则表
+## 考勤机考勤规则表
 
 ```
 DROP TABLE IF EXISTS `at_puncher_regular`;
@@ -325,7 +325,7 @@ CREATE TABLE `at_puncher_regular` (
 
 ```
 
-##考勤规则表
+## 考勤规则表
 
 ```
 DROP TABLE IF EXISTS `at_regular`;
@@ -344,7 +344,7 @@ CREATE TABLE `at_regular` (
 
 ```
 
-##中控设备表
+## 中控设备表
 
 ```
 DROP TABLE IF EXISTS `at_supcon`;
